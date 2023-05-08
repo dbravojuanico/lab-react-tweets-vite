@@ -34,14 +34,34 @@ const tweetsArray = [
   },
 ];
 
+// function App() {
+//   return (
+//     <div className="App">
+//       <Tweet tweet={tweetsArray[0]} />
+//       <Tweet tweet={tweetsArray[1]} />
+//       <Tweet tweet={tweetsArray[2]} />
+//     </div>
+//   );
+// }
+
 function App() {
   return (
     <div className="App">
-      <Tweet tweet={tweetsArray[0]} />
-      <Tweet tweet={tweetsArray[1]} />
-      <Tweet tweet={tweetsArray[2]} />
+      {tweetsArray.map((currentTweet) => (
+        <Tweet tweet={currentTweet} />
+      ))}
     </div>
   );
 }
+
+// function App() {
+//   return (
+//     <div className="App">
+//       {tweetsArray.forEach((currentTweet) => (
+//         <Tweet tweet={currentTweet} />
+//       ))}
+//     </div>
+//   );
+// }
 
 export default App;
